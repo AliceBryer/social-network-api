@@ -4,7 +4,7 @@ const {
   getAllThoughts,
   getThoughtById,
   addThought,
-} = require("../../controllers/thougthsController");
+} = require("../../controllers/thougthtController");
 
 router.route("/").get(getAllThoughts);
 

@@ -1,14 +1,13 @@
-const { thoughts } = require("../models/thoughts");
+const { Thoughts, User } = require("../models");
 
 // Create thought
 // Get all thoughts
 
 // get all thoughts
 
-const thoughtsController = {
+module.exports = {
   getAllThoughts(req, res) {
-    thoughts
-      .findAll({})
+    Thoughts.findAll({})
 
       .then((dbThoughtData) => res.json(dbThoughtData))
       .catch((err) => {
@@ -19,8 +18,7 @@ const thoughtsController = {
 
   // get one thought user by id
   getThoughtById({ params }, res) {
-    thoughts
-      .findOne({ _id: params.thoughtId })
+    Thoughts.findOne({ _id: params.thoughtId })
       .then((dbThoughtData) => {
         if (!dbThoughtData) {
           res.status(404).json({ message: "No id matched, please try again" });
@@ -37,8 +35,7 @@ const thoughtsController = {
   // create a thought
   addThought({ params, body }, res) {
     console.log(body);
-    thoughts
-      .create(body)
+    Thoughts.create(body)
       .then(({ _id }) => {
         return User.findOneAndUpdate(
           { _id: params.userId },
@@ -56,5 +53,3 @@ const thoughtsController = {
       .catch((err) => res.json(err));
   },
 };
-
-module.exports = thoughtsController;
