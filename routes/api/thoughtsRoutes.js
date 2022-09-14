@@ -8,7 +8,7 @@ const {
 
 router.route("/").get(getAllThoughts);
 
-router.route("/:thoughtId").(getThoughtById);
+router.route("/:thoughtId").get(getThoughtById);
 
 router.route("/:userId").post(addThought);
 

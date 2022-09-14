@@ -1,12 +1,11 @@
 const { thoughts } = require("../models/thoughts");
-module.exports = thoughtsController;
 
 // Create thought
 // Get all thoughts
 
 // get all thoughts
 
-const thoughtController = {
+const thoughtsController = {
   getAllThoughts(req, res) {
     thoughts
       .findAll({})
@@ -57,3 +56,5 @@ const thoughtController = {
       .catch((err) => res.json(err));
   },
 };
+
+module.exports = thoughtsController;

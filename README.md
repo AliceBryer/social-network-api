@@ -26,13 +26,13 @@ I have achieved this application with support from the University of Birmingham'
 ## Screenshots
 
 - **Screenshots**
-![screenshot](./Screenshots/Screenshot%20of%20application.jpg)
-![screenshot](./Screenshots/Screenshot%202.jpg)
+
 
 - **Video Link**
-https://drive.google.com/file/d/1RSVYYIoIn9P_ht2uGHOLijR4w5ZTRtmL/view
+
 
 ## Questions
 - **Email**: alicebryer123@gmail.com
 - **linkedin**: https://www.linkedin.com/in/alice-bryer-7aa760233/
+
 ```
